@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ccc;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+main {
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+
+    >header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 25px 0;
+        border-bottom: 1px solid darkgray;
+
+        >select {
+            padding: 10px;
+            outline: none;
+            font-size: 17px;
+            border-radius: 6px;
+        }
+    }
+
+    >section {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 50px 0;
+
+        >div {
+            &:first-of-type {
+                >form {
+                    margin-top: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+
+                    >input {
+                        padding: 14px;
+                        border: 1px solid darkgray;
+                        outline: none;
+                        width: 280px;
+                    }
+
+                    >button {
+                        padding: 14px;
+                        border: none;
+                        border-radius: 7px;
+                        background-color: purple;
+                        color: white;
+                        cursor: pointer;
+                        font-size: 17px;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                display: flex;
+                flex-direction: column;
+                width: 55%;
+                margin-top: 10px;
+
+                >ul {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    list-style: none;
+                    margin-bottom: 40px;
+
+                    >li {
+                        cursor: pointer;
+                        font-size: 17px;
+                    }
+                }
+
+                >div {
+
+                    >div {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 100%;
+                        background-color: #ffffff;
+                        padding: 30px 20px;
+                        border-radius: 10px;
+                        margin-bottom: 25px;
+
+                        >div {
+                            &:first-of-type {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 15px;
+
+                                >p {
+                                    &:first-of-type {
+                                        color: rgb(48, 48, 48);
+                                    }
+
+                                    &:last-of-type {
+                                        color: gray;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+
+                            &:last-of-type {
+                                display: flex;
+                                align-items: center;
+                                gap: 15px;
+
+                                >input {
+                                    accent-color: purple;
+                                    width: 15px;
+                                    height: 15px;
+                                }
+
+                                >button {
+                                    padding: 5px;
+                                    border: none;
+                                    background-color: rgb(134, 23, 134);
+                                    color: white;
+                                    border-radius: 3px;
+                                    cursor: pointer;
+                                    font-size: 20px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    >.fixed-info {
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        border: 1px solid rgb(255 220 75);
+        outline: 1px solid rgb(255 220 75);
+        outline-offset: 2px;
+        position: fixed;
+        bottom: 50px;
+        right: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        user-select: none;
+        z-index: 999;
+
+        &:hover {
+            >a {
+                >svg {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        >.circle {
+            width: 165px;
+            height: 165px;
+            border-radius: 50%;
+
+            >img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        >strong {
+            position: absolute;
+            top: 45%;
+            right: -95px;
+            transform: rotate(90deg);
+            font-size: 16px;
+            font-style: italic;
+            color: black;
+        }
+
+        >a {
+            color: inherit;
+
+            >svg {
+                width: 58px;
+                height: 58px;
+                color: rgba(0, 0, 0, 0.822);
+                position: absolute;
+                opacity: .6;
+                visibility: hidden;
+                transition: .2s linear;
+                padding: 10px 30px 10px 0;
+
+                &:hover {
+                    opacity: 1;
+                    color: var(--black);
+                }
+            }
+
+            &:nth-of-type(1) {
+                >svg {
+                    top: -10px;
+                    left: -30px;
+                }
+            }
+
+            &:nth-of-type(2) {
+                >svg {
+                    top: 40px;
+                    left: -45px;
+                }
+            }
+
+            &:nth-of-type(3) {
+                >svg {
+                    top: 90px;
+                    left: -45px;
+                }
+            }
+
+            &:nth-of-type(4) {
+                >svg {
+                    top: 130px;
+                    left: -30px;
+                }
+            }
+        }
+    }
+}
+
+.completed {
+    opacity: .5;
+    text-decoration: line-through;
+}
+
+.li-title {
+    font-size: 18px;
+}
